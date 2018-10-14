@@ -1,0 +1,1842 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/doid.owl#"
+     xml:base="http://purl.obolibrary.org/obo/doid.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doid="http://purl.obolibrary.org/obo/doid#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/doid.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/created_by"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasAlternativeId"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasDbXref"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasExactSynonym"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasOBONamespace"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasRelatedSynonym"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/id"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/inSubset"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#DO_MGI_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#DO_cancer_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_alternative_id</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in_subset</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000664 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000664">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label>has material basis in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
+        <rdfs:label>located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050117">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is the consequence of the presence of pathogenic microbial agents, including pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and aberrant proteins known as prions.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10115</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11078</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1304</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1321</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2040</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2288</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3099</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4120</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4620</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5256</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:945</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:95</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9532</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9696</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:079.0</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0001485</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infectious disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050117</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_AGR_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_MGI_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#NCIthesaurus"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease by infectious agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050161">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001558"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system disease which involves the lower respiratory tract.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:478.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:478.19</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:195823002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266346007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0029581</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050161</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower respiratory tract disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050615 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050615">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001004"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_1579"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in the respiratory system that is characterized by uncontrolled cellular proliferation in the respiratory tract.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050615</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050686 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0050686">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cancer that is classified based on the organ it starts in.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</obo:created_by>
+        <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-06-13T03:28:33Z</obo:creation_date>
+        <obo:hasDbXref>MESH:D009371</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050686</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ system cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060118">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that is located_in the thoracic cavity.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</obo:created_by>
+        <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-07-25T02:23:47Z</obo:creation_date>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060118</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thoracic disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_10155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10155">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000160"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gastrointestinal system cancer that is located_in the intestine.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C26.0</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:159.0</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D007414</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C4572</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187819006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:190089002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363508008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93838000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0346627</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant intestinal tumors</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of intestine</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10155</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestinal cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_10283 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10283">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_47"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A male reproductive organ cancer that is located_in the prostate.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:514</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C61</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:185</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG:05215</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D011471</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3343</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C7378</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:176807</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:300147</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:300704</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:601518</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:602759</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:608656</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:608658</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:609299</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:609558</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:610321</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:610997</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611100</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611868</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611928</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611955</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611958</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611959</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORDO:1331</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:126906006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363448003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:399068003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93974005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0033578</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0376358</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NGP - new growth of prostate</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hereditary prostate cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of the prostate</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate cancer, familial</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostatic cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostatic neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tumor of the prostate</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10283</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xref MGI.
+OMIM mapping confirmed by DO. [SN].</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_120">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive organ cancer that is manifested in the female genitals. This includes organs such as the ovaries, fallopian tubes, uterus, cervix, vagina and vulva.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1244</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1281</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C57</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:184</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D005833</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3053</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C4913</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:126907002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188207007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0017416</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153585</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0699889</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant Gynecologic tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of female genital organ</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:120</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive organ cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1324 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1324">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002048"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0050615"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A respiratory system cancer that is located_in the lung.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13075</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1322</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9881</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C34.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C34.2</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C34.3</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:162.3</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:162.4</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:162.5</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:162.8</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:211980</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:608935</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612571</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612593</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:614210</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187860004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187863002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187864008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187867001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187868006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187871003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187874006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269464000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0024624</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153491</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153492</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153493</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung neoplasm</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1324</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_14566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_14566">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that is characterized by abnormally rapid cell division.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0000818</obo:hasAlternativeId>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell process disease</obo:hasExactSynonym>
+        <obo:hasExactSynonym>neoplasm</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14566</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease of cellular proliferation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1579 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1579">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001004"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of anatomical entity that located_in the respiratory system which extends from the nasal sinuses to the diaphragm.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3226</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:J96-J99</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:J98</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:510-519.99</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:519</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155603009</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:196057004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:196184000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:196255004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266373008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0029582</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1579</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1612 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1612">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000310"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_3463"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic cancer that originates in the mammary gland.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1648</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4241</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C50</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C50-C50</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:174.8</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001943</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2910</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C9335</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:114480</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:600048</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:605365</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:126926005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154521006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:190121004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:254837009</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269595005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0006142</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153555</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C1458155</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of breast</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of the breast</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammary cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammary tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary breast cancer</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammary neoplasm</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1612</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xref MGI.
+OMIM mapping confirmed by DO. [SN].</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_162 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_162">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease of cellular proliferation that is malignant and primary, characterized by uncontrolled cellular proliferation, local cell invasion and metastasis.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C80</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C80.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:199</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D009369</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C9305</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154432008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154433003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154577008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187597000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188475001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188482002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:190150006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269513004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269623003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269626006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269634000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363346000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:38807002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0006826</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor </obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary cancer</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Updating out dated UMLS CUI.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_193">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003133"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer that is manifested in the reproductive organs.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1900</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3674</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0178830</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproductive tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant reproductive system neoplasm</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer of reproductive system</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:193</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive organ cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1993 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1993">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001052"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A colorectal cancer that is located_in the rectum.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1989</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C20</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:154.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D012004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C7418</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C9382</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154466004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187761007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:254582000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:269545009</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363351006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93984006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007113</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0949022</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carcinoma of rectum</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carcinoma of the rectum</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant Rectal tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of rectum</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant rectum tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of rectum (disorder)</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectal cancer</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer of rectum</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1993</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_229">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000474"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            A reproductive system disease that impairs the ability to reproduce and is located in the uterus, vagina, cervix, ovaries or fallopian tubes.
+        </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:156032001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:156066005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:198486002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:244938009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:266680004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:310789003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2018_03_01:38233001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0017411</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:229</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive system disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3119">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001007"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in gastrointestinal tract that is manifested in organs of the gastrointestinal system.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4945</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8377</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C26.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:239.0</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D004067</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D005770</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3052</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C4890</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:126768004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:128348002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:128415001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:189527000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:276806006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:367543008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:428905002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93811007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0012243</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0017185</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0685938</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GI tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive system cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrointestinal tract cancer</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3119</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrointestinal system cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3463 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3463">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000310"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thoracic disease that is located_in the breast.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:N60-N65</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:N64.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:610-612.99</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:611.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001941</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C26709</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155946009</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155962003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155966000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:198129001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:198566004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266647006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:79604008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0006145</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3463</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3856 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3856">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003135"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive organ cancer that is manifested in the male genital system. This includes organs such as the penis and scrotum.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10284</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C60-C63</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C63.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:187.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D005834</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3054</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C8561</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:126895004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:190127000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:190130007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363515000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93885006</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0017417</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153606</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male genital cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive system neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of male genital organ or tract</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of male genital organ, NOS</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of male genital organ, site unspecified</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of male genital organ, unspecified (disorder)</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant neoplasm of male genital organs (disorder)</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of male Reproductive system</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of male genital organ</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant tumor of male genital organ (disorder)</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neoplasm of male genital organ</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tumor of male Reproductive system</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male genital neoplasm</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3856</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive organ cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease is a disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D004194</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2991</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:64572001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0012634</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4362 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4362">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female reproductive organ cancer that is located_in the cervix.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4361</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C53</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C53.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D002583</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2940</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C9311</obo:hasDbXref>
+        <obo:hasDbXref>OMIM:603956</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:123841004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188174005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188186008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:254885005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363354003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93752005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007847</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0007873</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cervical neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cervix cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cervix uteri cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neoplasm of uterine cervix (disorder)</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tumor of the Cervix Uteri</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uterine cervical neoplasm</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4362</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_cancer_slim"/>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cervical cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_47 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_47">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:N42.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:602.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D011469</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C26865</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:197979000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:30281009</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0033575</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:47</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_48 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_48">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000079"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive system disease that affects male reproductive organs.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:N50.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:600-608.99</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:608.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D005832</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155905004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155933004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:155945008</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:198089001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:198553004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:64557000</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0017412</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:48</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive system disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_5093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5093">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000915"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organ system cancer located_in the thoracic cavity that develops in the different types of cells within the lungs, as well as less common cancers of the esophagus, the trachea, or the chest wall.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3937</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C76.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:195.1</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D013899</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3406</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3576</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188361007</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:188365003</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:255058005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0039981</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0153661</obo:hasDbXref>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thoracic tumor</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thorax cancer</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thorax neoplasm</obo:hasExactSynonym>
+        <obo:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tumor of thorax</obo:hasExactSynonym>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5093</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_MGI_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thoracic cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_526 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_526">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viral infectious disease that results_in destruction of immune system, leading to life-threatening opportunistic infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. The virus infects helper T cells (CD4+ T cells) which are directly or indirectly destroyed, macrophages, and dendritic cells. The infection has_symptom diarrhea, has_symptom fatigue, has_symptom fever, has_symptom vaginal yeast infection, has_symptom headache, has_symptom mouth sores, has_symptom muscle aches, has_symptom sore throat, and has_symptom swollen lymph glands.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B20</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B20-B20</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:042</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:042-042.99</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D015658</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3108</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:123321001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:186705005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187438009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187453001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:86406008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0019693</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIV infection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:526</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#zoonotic_infectious_disease"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human immunodeficiency virus infectious disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_5672 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5672">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_162"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000059"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intestinal cancer that effects the long, tube-like organ that is connected to the small intestine at one end and the anus at the other.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1994</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1997</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:C18.9</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D015179</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2955</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C4978</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C5105</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:363510005</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:408645001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:93854002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0009402</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0346629</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C1319315</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5672</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#TopNodes_DOcancerslim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">large intestine cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_635 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_635">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Human immunodeficiency virus infectious disease that results_in reduction in the numbers of CD4-bearing helper T cells below 200 per �L of blood or 14% of all lymphocytes thereby rendering the subject highly vulnerable to life-threatening infections and cancers, has_material_basis_in Human immunodeficiency virus 1 or has_material_basis_in Human immunodeficiency virus 2, which are transmitted_by sexual contact, transmitted_by transfer of blood, semen, vaginal fluid, pre-ejaculate, or breast milk, transmitted_by congenital method, and transmitted_by contaminated needles. Opportunistic infections are common in people with AIDS.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFO:0000765</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B20</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D000163</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C2851</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:609423</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:186705005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:186715004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:234644008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266201009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:62479008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0001175</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AIDS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acquired Immune deficiency</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acquired immune deficiency syndrome</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:635</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#zoonotic_infectious_disease"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acquired immunodeficiency syndrome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_7 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_7">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease that manifests in a defined anatomical structure.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:71</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:72</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8</obo:hasAlternativeId>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease of anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_850 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_850">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_4"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002048"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lower respiratory tract disease in which the function of the lungs is adversely affected by narrowing or blockage of the airways resulting in poor air flow, a loss of elasticity in the lungs that produces a decrease in the total volume of air that the lungs are able to hold, and clotting, scarring, or inflammation of the blood vessels that affect the ability of the lungs to take up oxygen and to release carbon dioxide.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11894</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11895</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:29</obo:hasAlternativeId>
+        <obo:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:766</obo:hasAlternativeId>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:J98.4</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D008171</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3198</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:196164004</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:19829001</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266374002</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0024115</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:850</obo:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Updating out dated CUI and removing lung abscess as a synonym.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_9256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9256">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A large intestine cancer that is located_in the colon and/or located_in the rectum.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG:05210</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D015179</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:114500</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:608812</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:611469</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612229</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612230</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612231</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612232</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612589</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612590</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612591</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:612592</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM:615083</obo:hasDbXref>
+        <obo:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C1527249</obo:hasDbXref>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9256</obo:id>
+        <obo:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#DO_FlyBase_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xref MGI.
+OMIM mapping confirmed by DO. [SN].</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colorectal cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_934">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_0050117"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease by infectious agent that results_in infection, has_material_basis_in Viruses.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1329</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:A94</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B34</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B34.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:060-066.99</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:066.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D001102</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D014777</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C3439</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C34396</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154319002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154345006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:154372003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:186619002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:186754003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:187471008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266116004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266188005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:266194002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:34014006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2016_03_01:40610006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0003723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0042769</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viral Infection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viral disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus infection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:934</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/doid#DO_FlyBase_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viral infectious disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0003003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003003">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colon cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viruses</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_11632 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11632">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retroviridae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_11646 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11646">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lentivirus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_11652 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11652">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Primate lentivirus group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_11676 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11676">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus 1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_11709 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11709">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus 2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_327045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_327045">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orthoretrovirinae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35268 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35268">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retro-transcribing viruses</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005156"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uterine cervix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000059">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">large intestine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000061">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000062">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000064">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000065">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004119"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">segment of respiratory tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000079">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000160 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000160">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000171 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000171">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiration organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000310 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000310">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000467 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000467">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000474 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000474">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000475 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000475">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism subdivision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000915 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000915">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011676"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thoracic segment of trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000990 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000990">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001004">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001007">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001052">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001062">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001155">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001558 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001558">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower respiratory tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000171"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002167">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">right lung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002168">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left lung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002367 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002367">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0003133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005156"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0003134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003134">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0003135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003135">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive organ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0003937 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003937">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005156"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex gland</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004119">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endoderm-derived structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004120">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mesoderm-derived structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0004921 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004921">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subdivision of digestive tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0005156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005156">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0005399 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005399">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male reproductive gland</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0010000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010000">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multicellular anatomical structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0010147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010147">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male accessory sex gland</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0011676 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0011676">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subdivision of organism along main body axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0013522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0013522">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subdivision of tube</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0034929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0034929">
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external soft tissue zone</rdfs:label>
+    </owl:Class>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+    <rdf:Description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

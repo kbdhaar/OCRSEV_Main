@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Annotation properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#has_Description -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#has_Description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#has_Italian_Label -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#has_Italian_Label">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Data properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#has_Description -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#has_Description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#has_Italian_Label -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#has_Italian_Label">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#A00_B99 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#A00_B99">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#A00_B99">
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C00_D48"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R00_R99"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z00_Z99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Certain infectious and parasitic diseases</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B20 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B20">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#B20_B24"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#B21"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus [HIV] disease resulting in infectious and parasitic diseases</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B20_B24 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B20_B24">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#A00_B99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus [HIV] disease</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B21 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B21">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#B20_B24"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus [HIV] disease resulting in malignant neoplasms</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B95_B97 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B95_B97">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#A00_B99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacterial, viral and other infectious agents</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B97 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B97">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#B95_B97"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viral agents as the cause of diseases classified to other chapters</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#B97_7 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#B97_7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#B97"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papillomavirus as the cause of diseases classified to other chapters</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C00_D48 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C00_D48">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R00_R99"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z00_Z99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplasms</has_Description>
+	<has_Italian_Label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></has_Italian_Label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C51_C58 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C51_C58">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C00_D48"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#D00_D09"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasms of female genital organs</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C53 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C53">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C51_C58"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of cervix uteri</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C53_0 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C53_0">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_1"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_8"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_9"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endocervix</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C53_1 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C53_1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_8"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_9"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exocervix</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C53_8 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C53_8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53_9"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overlapping lesion of cervix uteri</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#C53_9 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#C53_9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C53"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cervix uteri, unspecified</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#D00_D09 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#D00_D09">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#C00_D48"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In situ neoplasms</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#D06 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#D06">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#D00_D09"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carcinoma in situ of cervix uteri</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter -->
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#R00_R99 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#R00_R99">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z00_Z99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified</has_Description>
+	<has_Italian_Label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></has_Italian_Label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#R83_R89 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#R83_R89">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R00_R99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal findings on examination of other body fluids, substances and tissues, without diagnosis</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#R87 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#R87">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R83_R89"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal findings in specimens from female genital organs</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#R87_6 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#R87_6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R87"/>
+	<owl:disjointWith rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R87_8"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal cytological findings</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#R87_8 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#R87_8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#R87"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other abnormal findings</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#Z00_Z13 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Z00_Z13">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z00_Z99"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persons encountering health services for examination and investigation</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#Z00_Z99 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Z00_Z99">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#ICD10_Chapter"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Factors influencing health status and contact with health services</has_Description>
+	<has_Italian_Label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></has_Italian_Label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#Z01 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Z01">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z00_Z13"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other special examinations and investigations of persons without complaint or reported diagnosis</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- http://www.owl-ontologies.com/unnamed.owl#Z01_4 -->
+
+<rdf:Description rdf:about="http://www.owl-ontologies.com/unnamed.owl#Z01_4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/unnamed.owl#Z01"/>
+	<has_Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gynaecological examination (general)(routine)</has_Description>
+</rdf:Description>
+<!--  -->
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
+</rdf:RDF>

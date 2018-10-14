@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/efoimp#"
+     xml:base="http://purl.obolibrary.org/obo/efoimp"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/efoimp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon#has_rank"/>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation">
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</efo:NCI_Thesaurus_definition_citation>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="http://www.ebi.ac.uk/efo/definition_citation"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/definition_citation">
+        <obo:IAO_0000115>A definition citation is a document, ontology class, person or organization from which the definition of the class is derived. It is used in the same sense as a citation in literature, in that the definition may have been derived from these sources or that this definition is related to these source.</obo:IAO_0000115>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/format-version"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/bioportal_provenance"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
+        <rdfs:label>term editor</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/creator"/>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/SNOMEDCT_definition_citation">
+        <efo:SNOMEDCT_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ebi.ac.uk/efo/SNOMEDCT_definition_citation is an annotation property that is drawn from SNOMEDCT</efo:SNOMEDCT_definition_citation>
+        <rdfs:subPropertyOf rdf:resource="http://www.ebi.ac.uk/efo/definition_citation"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/alternative_term">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alternative_term</rdfs:label>
+        <obo:IAO_0000115>An alternative label for a given entity such as a commonly used abbreviation or synonym. </obo:IAO_0000115>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10566">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human papillomavirus</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class imported / merged by efoimporter</obo:IAO_0000117>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Papilloma Virus</efo:alternative_term>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:10566</oboInOwl:id>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C14226</efo:NCI_Thesaurus_definition_citation>
+        <efo:SNOMEDCT_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT:9482002</efo:SNOMEDCT_definition_citation>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human papillomavirus HPV</efo:alternative_term>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+        <obo:IAO_0000412 rdf:resource="http://www.ebi.ac.uk/efo/efo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0001668 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0001668">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human papilloma virus infection</rdfs:label>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPV</efo:alternative_term>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Papilloma Virus Infection</efo:alternative_term>
+        <efo:bioportal_provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Papilloma Virus Infection[accessedResource: NCIt:C27851][accessDate: 05-04-2011]</efo:bioportal_provenance>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Malone</obo:IAO_0000117>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C27851</efo:NCI_Thesaurus_definition_citation>
+        <efo:SNOMEDCT_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT:240532009</efo:SNOMEDCT_definition_citation>
+        <efo:alternative_term>Human Papillomavirus Infection</efo:alternative_term>
+        <obo:IAO_0000115>A viral infectious disease that has_material_basis_in human papillomaviruses, which establish productive infections only in the stratified epithelium of the skin or mucous membranes. These viruses cause warts and sometimes tumors. They are transmitted_by sexual contact.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://www.ebi.ac.uk/efo/efo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ebi.ac.uk/efo/efo.owl">
+        <obo:format-version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4</obo:format-version>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.93</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-15</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to BRENDA tissue / enzyme source (BTO) verunknown</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Cell type (CL) verunknown</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Chemical entities of biological interest (CHEBI) verunknown</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Drosophila gross anatomy (FBbt) ver2011-02-10</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Foundational Model of Anatomy (FMA) ver3.1</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Gene Ontology (GO) ver1.886</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Human disease (DOID) ver</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to International Classification of Diseases (ICD-9) ver9</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to MGED Ontology (MO) ver1.3.1.1</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Malaria Ontology (IDOMAL) ver1.22</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Mammalian phenotype (MP) vernull</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Medical Subject Headings (MSH) ver2011_2010_08_30</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Microarray experimental conditions (MO) ver1.3.1.1</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Minimal anatomical terminology (MAT) ver1.1</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Mosquito gross anatomy (TGMA) version unknown</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to NCBI organismal classification (NCBITaxon) ver1.2</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to NCI Thesaurus (NCIt) ver11.01e</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to NIFSTD (nif) ver2.2 - December 20, 2010</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Ontology for Biomedical Investigations (OBI) ver2010-10-26 Vancouver 2010 release, RC2</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Phenotypic quality (PATO) vernull</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to SNOMED Clinical Terms (SNOMEDCT) ver2010_07_31</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Teleost Anatomy Ontology (TAO) vernull</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Teleost anatomy and development (TAO) ver1.158</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Units of measurement (UO) vernull</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioportal mappings to Zebrafish anatomy and development (ZFA) verunknown</rdfs:comment>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catherine Leroy</efo:creator>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright [2014] EMBL - European Bioinformatics Institute 
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the 
+License. </dc:rights>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drashtti Vasant</efo:creator>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ele Holloway</efo:creator>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emma Kate Hastings</efo:creator>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helen Parkinson</efo:creator>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Malone</efo:creator>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon Ison</efo:creator>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mappings to Plant structure (PO)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mappings: CRISP Thesaurus Version 2.5.2.0</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mappings: The Jackson Lab</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mappings:The Arabidopsis Information Resource (TAIR)</rdfs:comment>
+        <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasz Adamusiak</efo:creator>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.apache.org/licenses/LICENSE-2.0</terms:license>
+        <efo:creator>Simon Jupp</efo:creator>
+        <efo:creator>Eleanor Williams</efo:creator>
+        <rdfs:comment>Ontology containing axioms that describe relationships between orphanet disease ontology classes and efo classes.</rdfs:comment>
+        <efo:creator>Sirarat Sarntivijai</efo:creator>
+        <efo:creator>Dani Welter</efo:creator>
+        <efo:creator>Natalja Kurbatova</efo:creator>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.4.1806) http://owlapi.sourceforge.net -->
+

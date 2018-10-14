@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.bioontology.org/ontology/HOM-ICD9CM/"
+     xml:base="http://purl.bioontology.org/ontology/HOM-ICD9CM/"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_BASECODE -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_BASECODE"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_FULLNAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_FULLNAME"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_PATH -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_PATH"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL1 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL1"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL2 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL2"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL3 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL3"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL4 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL4"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL5 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL5"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL6 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL6"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/LEVEL_1 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/LEVEL_1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_BASECODE -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_BASECODE"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_FULLNAME -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_FULLNAME"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/C_PATH -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/C_PATH"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL1 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL1"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL2 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL2"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL3 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL3"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL4 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL4"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL5 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL5"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL6 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/ICD9_LEVEL6"/>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/LEVEL_1 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/LEVEL_1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15526 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15526">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4646"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\SYMPTOMS, SIGNS, AND ILL-DEFINED CONDITIONS\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00011203</C_PATH>
+        <ICD9_LEVEL3 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SYMPTOMS, SIGNS, AND ILL-DEFINED CONDITIONS (780-799.99)</ICD9_LEVEL3>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SYMPTOMS, SIGNS, AND ILL-DEFINED CONDITIONS (780-799.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15527 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15527">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15526"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\SYMPTOMS, SIGNS, AND ILL-DEFINED CONDITIONS\NONSPECIFIC ABNORMAL FINDINGS\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00011472</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NONSPECIFIC ABNORMAL FINDINGS (790-796.99)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NONSPECIFIC ABNORMAL FINDINGS (790-796.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_17270 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_17270">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_15527"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:795.02</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\SYMPTOMS, SIGNS, AND ILL-DEFINED CONDITIONS\NONSPECIFIC ABNORMAL FINDINGS\Other and nonspecific abnormal cytological, histological, immunological and DNA test findings\Abnormal Papanicolaou smear of cervix and cervical HPV\Papanicolaou smear of cervix with atypical squamous cells cannot exclude high grade squamous intraepithelial lesion (ASC-H)\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00011561</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papanicolaou smear of cervix with atypical squamous cells cannot exclude high grade squamous intraepithelial lesion (ASC-H) (795.02)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papanicolaou smear of cervix with atypical squamous cells cannot exclude high grade squamous intraepithelial lesion (ASC-H) (795.02)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000073"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0000ICD9CM</C_PATH>
+        <ICD9_LEVEL1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM</ICD9_LEVEL1>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20209 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20209">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_22202"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES\PERSONS WITHOUT REPORTED DIAGNOSIS ENCOUNTERED DURING EXAMINATION AND INVESTIGATION OF INDIVIDUALS AND POPULATIONS\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VDX0001042</C_PATH>
+        <ICD9_LEVEL3 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSONS WITHOUT REPORTED DIAGNOSIS ENCOUNTERED DURING EXAMINATION AND INVESTIGATION OF INDIVIDUALS AND POPULATIONS (V70-V82.99)</ICD9_LEVEL3>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSONS WITHOUT REPORTED DIAGNOSIS ENCOUNTERED DURING EXAMINATION AND INVESTIGATION OF INDIVIDUALS AND POPULATIONS (V70-V82.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20246 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20246">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20209"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:V72.31</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES\PERSONS WITHOUT REPORTED DIAGNOSIS ENCOUNTERED DURING EXAMINATION AND INVESTIGATION OF INDIVIDUALS AND POPULATIONS\Special investigations and examinations\Special investigations and examinations - Gynecological examination\Routine gynecological examination\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VDX0001080</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Routine gynecological examination (V72.31)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Routine gynecological examination (V72.31)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20311 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20311">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20209"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:V76.2</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES\PERSONS WITHOUT REPORTED DIAGNOSIS ENCOUNTERED DURING EXAMINATION AND INVESTIGATION OF INDIVIDUALS AND POPULATIONS\Special screening for malignant neoplasms\Screening for malignant neoplasms of the cervix\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VDX0001145</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening for malignant neoplasms of the cervix (V76.2)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening for malignant neoplasms of the cervix (V76.2)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_22202 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_22202">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VDX0000001</C_PATH>
+        <ICD9_LEVEL2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES (V01-V91.99)</ICD9_LEVEL2>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUPPLEMENTARY CLASSIFICATION OF FACTORS INFLUENCING HEALTH STATUS AND CONTACT WITH HEALTH SERVICES (V01-V91.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4645 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4645">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4646"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\INFECTIOUS AND PARASITIC DISEASES\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00000002</C_PATH>
+        <ICD9_LEVEL3 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INFECTIOUS AND PARASITIC DISEASES (001-139.99)</ICD9_LEVEL3>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INFECTIOUS AND PARASITIC DISEASES (001-139.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4646 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4646">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_20"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00000001</C_PATH>
+        <ICD9_LEVEL2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISEASES AND INJURIES (001-999.99)</ICD9_LEVEL2>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISEASES AND INJURIES (001-999.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4647 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4647">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4646"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001525</C_PATH>
+        <ICD9_LEVEL3 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEOPLASMS (140-239.99)</ICD9_LEVEL3>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEOPLASMS (140-239.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4654 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4654">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4645"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\INFECTIOUS AND PARASITIC DISEASES\OTHER BACTERIAL DISEASES\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00000631</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTHER BACTERIAL DISEASES (030-041.99)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTHER BACTERIAL DISEASES (030-041.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4658 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4658">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4645"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\INFECTIOUS AND PARASITIC DISEASES\OTHER DISEASES DUE TO VIRUSES AND CHLAMYDIAE\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00000957</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTHER DISEASES DUE TO VIRUSES AND CHLAMYDIAE (070-079.99)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTHER DISEASES DUE TO VIRUSES AND CHLAMYDIAE (070-079.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4647"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001780</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MALIGNANT NEOPLASM OF GENITOURINARY ORGANS (179-189.99)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MALIGNANT NEOPLASM OF GENITOURINARY ORGANS (179-189.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4675 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4675">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4647"/>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\CARCINOMA IN SITU\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00002534</C_PATH>
+        <ICD9_LEVEL4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARCINOMA IN SITU (230-234.99)</ICD9_LEVEL4>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARCINOMA IN SITU (230-234.99)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_5563 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_5563">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4654"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:042</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\INFECTIOUS AND PARASITIC DISEASES\HUMAN IMMUNODEFICIENCY VIRUS [HIV] INFECTION\Human immunodeficiency virus [HIV] disease\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00000751</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus [HIV] disease (042)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human immunodeficiency virus [HIV] disease (042)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_5861 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_5861">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4658"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:079.4</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\INFECTIOUS AND PARASITIC DISEASES\OTHER DISEASES DUE TO VIRUSES AND CHLAMYDIAE\Viral and chlamydial infection in conditions classified elsewhere and of unspecified site\Human papillomavirus infection in conditions classified elsewhere and of unspecified site\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001053</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human papillomavirus infection in conditions classified elsewhere and of unspecified site (079.4)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human papillomavirus infection in conditions classified elsewhere and of unspecified site (079.4)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6577 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6577">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\Malignant neoplasm of cervix uteri\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001782</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of cervix uteri (180)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of cervix uteri (180)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6578 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6578">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180.0</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\Malignant neoplasm of cervix uteri\Malignant neoplasm of endocervix\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001783</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of endocervix (180.0)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of endocervix (180.0)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6579 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6579">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180.1</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\Malignant neoplasm of cervix uteri\Malignant neoplasm of exocervix\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001784</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of exocervix (180.1)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of exocervix (180.1)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6580 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6580">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180.8</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\Malignant neoplasm of cervix uteri\Malignant neoplasm of other specified sites of cervix\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001785</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of other specified sites of cervix (180.8)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of other specified sites of cervix (180.8)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6581 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_6581">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4670"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:180.9</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\MALIGNANT NEOPLASM OF GENITOURINARY ORGANS\Malignant neoplasm of cervix uteri\Malignant neoplasm of cervix uteri, unspecified\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00001786</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of cervix uteri, unspecified (180.9)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malignant neoplasm of cervix uteri, unspecified (180.9)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_7355 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_7355">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/HOM-ICD9CM/MM_CLASS_4675"/>
+        <C_BASECODE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:233.1</C_BASECODE>
+        <C_FULLNAME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\i2b2\Diagnoses\ICD9CM\DISEASES AND INJURIES\NEOPLASMS\CARCINOMA IN SITU\Carcinoma in situ of breast and genitourinary system\Carcinoma in situ of cervix uteri\</C_FULLNAME>
+        <C_PATH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DX00002565</C_PATH>
+        <ICD9_LEVEL5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carcinoma in situ of cervix uteri (233.1)</ICD9_LEVEL5>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carcinoma in situ of cervix uteri (233.1)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000073"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,65 @@
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet_00000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000099"/>
+        <rdfs:label xml:lang="en">PCORnet racial identification process</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000098"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">A racial identity that is the output of a racial identification process that uses the PCORnet CDM race or terminology. PCORnet CDM claims to use the OMB racial classification, but the crucial difference is that PCORnet CDM requires persons to identify with only one category whereas the OMB allows for multiple racial identities as outputs of an identification process.</rdfs:comment>
+        <rdfs:label xml:lang="en">PCORnet racial identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet American Indian or Alaska Native identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet Asian identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet black or African American identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet Native Hawaiian or other Pacific Islander identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet white identity datum</rdfs:label>
+    </owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000003"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet multiple race identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000127"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000018"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">From PCORnet CDM &quot;A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">PCORnet Hispanic identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000128"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000018"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet not Hispanic identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000100"/>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet ethnic identity datum</rdfs:label>
+    </owl:Class>
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PCORnet/PCORnet_00000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
+        <obo:IAO_0000115 xml:lang="en">A centrally registered identifier that denotes a person in a PCORnet data mart and is used to link across tables. This identifier is not necessarily unique within PCORnet.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">PCORnet patient identifier</rdfs:label>
+    </owl:Class>

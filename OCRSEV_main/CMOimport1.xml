@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmo.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmo.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmo.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmo/2.39/cmo.owl"/>
+        <obo:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:02:2017 19:18</obo:date>
+        <obo:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:default-namespace>
+        <obo:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</obo:auto-generated-by>
+        <obo:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jesmith</obo:saved-by>
+        <obo:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</obo:hasOBOFormatVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasOBONamespace"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/hasRelatedSynonym"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_format_version</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000000">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quantitative or qualitative value which is the result of an act of assessing a morphological or physiological state or property in a single individual or sample or a group of individuals or samples, based on direct observation or experimental manipulation.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMO:0000000</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clinical measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000012">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The heaviness or degree to which an entire organism&apos;s body is drawn to the earth by gravity.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMO:0000012</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000021">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement of the structure or forms of the entire body or parts of the body of an organism.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anthropometric measurement</obo:hasRelatedSynonym>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">morphometry</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMO:0000021</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body morphological measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000105">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement to related body weight to height in an organisms typically calculated as the weight of an individual divided by the height of that individual squared.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:hasOBONamespace>
+        <obo:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BMI</obo:hasRelatedSynonym>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMO:0000105</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body mass index (BMI)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000106">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The vertical measurement of a body.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <obo:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical_Measurement.ontology</obo:hasOBONamespace>
+        <obo:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMO:0000106</obo:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body height</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
