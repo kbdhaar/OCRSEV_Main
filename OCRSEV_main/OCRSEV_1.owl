@@ -40,8 +40,8 @@
     <Import>http://purl.obolibrary.org/obo/chmoimp</Import>
     <Import>http://purl.obolibrary.org/obo/ro/releases/2017-04-11/ro.owl</Import>
     <Import>http://purl.obolibrary.org/obo/idobru_imp.owl</Import>
-    <Import>http://www.semanticweb.org/sseppala/ontologies/2016/11/vso_merged</Import>
     <Import>http://purl.obolibrary.org/obo/oostt_main</Import>
+    <Import>http://www.semanticweb.org/sseppala/ontologies/2016/11/vso_merged</Import>
     <Import>http://purl.obolibrary.org/obo/2016-09-14/obib.owl</Import>
     <Import>http://purl.obolibrary.org/obo/ero.owl</Import>
     <Import>http://purl.obolibrary.org/obo/doid.owl</Import>
@@ -1963,6 +1963,13 @@ Description: An ontology developed for social-ecological variables that are resp
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="obo:BFO_0000075"/>
             <Class IRI="/OCRSEV_00000578"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/OCRSEV_00000577"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/IAO_0000136"/>
+            <Class abbreviatedIRI="obo:BFO_0000009"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5562,12 +5569,12 @@ Definition: A clinical finding represented as an ICD10 code that is about a spec
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:minQualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2638"/>
+        <AnonymousIndividual nodeID="_:genid236508"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:minQualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2639"/>
+        <AnonymousIndividual nodeID="_:genid236509"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Literal>
     </AnnotationAssertion>
 </Ontology>
