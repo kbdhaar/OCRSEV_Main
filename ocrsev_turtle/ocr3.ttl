@@ -1,0 +1,547 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ocr: <http://purl.obolibrary.org/obo/OCRSEV/> .
+@prefix pcor: <http://purl.obolibrary.org/obo/PCORnet/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix homicd9cm:	<http://purl.bioontology.org/ontology/HOM-ICD9CM/> .
+@prefix medres:	<http://vivoweb.org/ontology/core#>.
+@prefix efo: <http://www.ebi.ac.uk/efo/>.
+
+<#map-SEV-medi-hosp-2dregion>
+    rr:logicalTable [ rr:sqlQuery """
+        select h_num_iri, hosp_num, two_iri, h_agg_iri from hosp_num""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{h_num_iri}";
+        rr:class ocr:OCRSEV_00000704;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "hosp_num"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{h_agg_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{two_iri}"; ]
+    ].
+
+<#map-SEV-medi-hosp-2d-3zip>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.two_iri, a.three_iri, b.p_uri from hosp_num as a, demo as b where a.three_zip = b.three_zip""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{two_iri}";
+        rr:class obo:BFO_0000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:STATO_0000205;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{three_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:RO_0001015;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-medi-hosp-3zip>
+    rr:logicalTable [ rr:sqlQuery """
+        select three_iri, three_zip from hosp_num""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{three_iri}";
+        rr:class ocr:OCRSEV_00000701;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  rdfs:label;
+        rr:objectMap [ 
+	    rr:column "three_zip"; ]
+    ].
+
+<#map-SEV-medi-hosp-agg>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.h_agg_iri, b.hosp_iri from hosp_num as a, hosp as b where a.three_zip = b.three_zip""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{h_agg_iri}";
+        rr:class ocr:OCRSEV_00000700;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:RO_0002351;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{hosp_iri}"; ]
+    ].
+
+<#map-SEV-medi-hosp-hospiri>
+    rr:logicalTable [ rr:sqlQuery """
+        select hospital_name, hosp_iri, ccn_iri, orgn_iri from hosp""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{hosp_iri}";
+        rr:class obo:OMRSE_00000102;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:STATO_0000205;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{ccn_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OMRSE_00000068;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{orgn_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "hospital_name"; ];
+    ].
+
+<#map-SEV-medi-gyn-2dregion>
+    rr:logicalTable [ rr:sqlQuery """
+        (select g_num_iri, gynec_total, g_agg_iri, two_iri from hosp_num) union
+			(select a.g_num_iri, a.gynec_num as gynec_total, a.g_agg_iri, b.two_iri 
+            from gynec_num as a, hosp_num as b where a.three_zip = b.three_zip)""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{g_num_iri}";
+        rr:class obo:OCRSEV_00000707;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{two_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{g_agg_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gynec_total"; ];
+    ].
+
+<#map-SEV-medi-gyn-agg>
+    rr:logicalTable [ rr:sqlQuery """
+        (select a.g_agg_iri , b.gyn_iri from hosp_num as a, gynec as b where a.three_zip = b.three_zip) union
+			(select a.g_agg_iri, b.gyn_iri from gynec_num as a, gynec as b where a.three_zip = b.three_zip) """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{g_agg_iri}";
+        rr:class obo:OMRSE_00000022;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate   obo:RO_0002351;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{gyn_iri}"; ]
+    ].
+
+<#map-SEV-medi-gyn-gyniri>
+    rr:logicalTable [ rr:sqlQuery """
+        select gyn_iri, grole_iri, concat( first_name, ' ', middle_name, ' ', last_name) as nam, 
+            npi_iri, resi_iri from gynec""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{gyn_iri}";
+        rr:class obo:NCBITaxon_9606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:BFO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{resi_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:BFO_0000087;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "nam"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:STATO_0000205;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{npi_iri}"; ]
+    ].
+
+<#map-SEV-medi-gyn-role>
+    rr:logicalTable [ rr:sqlQuery """
+        select grole_iri from gynec""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000715;
+    ].
+
+<#map-SEV-medi-gyncat-inrad>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'INTERVENTIONAL RADIOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000727;
+    ].
+
+<#map-SEV-medi-gyncat-radonc>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'RADIATION ONCOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000737;
+    ].
+
+<#map-SEV-med-gyncat-medonc>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'MEDICAL ONCOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000729;
+    ].
+
+<#map-SEV-medi-gyncat-genphy>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'GENERAL PRACTICE'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000719;
+    ].
+
+<#map-SEV-medi-gyncat-famphy>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'FAMILY PRACTICE'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000721;
+    ].
+
+<#map-SEV-medi-gyncat-gynec>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'OBSTETRICS/GYNECOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class obo:OOSTT_00000248;
+    ].
+
+<#map-SEV-medi-gyncat-gensurg>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'GENERAL SURGERY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000723;
+    ].
+
+<#map-SEV-medi-gyncat-diagrad>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'DIAGNOSTIC RADIOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000736;
+    ].
+
+<#map-SEV-medi-gyncat-gynonc>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'GYNECOLOGICAL ONCOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000725;
+    ].
+
+<#map-SEV-medi-gyncat-surgonc>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct grole_iri from gynec where primary_specialty = 'SURGICAL ONCOLOGY'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{grole_iri}";
+        rr:class ocr:OCRSEV_00000735;
+    ].
+
+<#map-SEV-medi-gyn-npi>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct npi_iri, npi from gynec""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{npi_iri}";
+        rr:class ocr:OCRSEV_00000738;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "npi"; ] ;
+    ].
+
+<#map-SEV-medi-hosp-ccn>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct ccn_iri, provider_id from hosp """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{ccn_iri}";
+        rr:class ocr:OCRSEV_00000739;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "provider_id"; ] ;
+    ].
+
+<#map-SEV-medi-hosp-orgn-gyn>
+    rr:logicalTable [ rr:sqlQuery """
+        select b.gyn_iri, c.orgn_iri, a.hce_iri from gynec as b, hosp as c, encount as a, 
+            tmp_pat as z where  b.city = c.city and b.Hospital_affiliation_CCN_1 = c.Provider_ID 
+            and a.enc1 = z.enc2 and b.npi = z.gyn""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{orgn_iri}";
+        rr:class obo:OBI_0000245;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002351;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{gyn_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{hce_iri}"; ]
+    ].
+
+<#map-SEV-medi-gyn-hce>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct a.hce_iri, b.gyn, c.gyn_iri from encount as a, tmp_pat as b, gynec as c
+			where a.enc1 = b.enc2 and b.gyn = c.npi""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{gyn_iri}";
+        rr:class obo:NCBITaxon_9606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{hce_iri}"; ]
+    ].
+
+<#map-SEV-medi-hce-patid-interval>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct a.hce_iri, a.interval_iri, b.patid, c.p_uri from encount as a, 
+            tmp_pat as b, demo as c where a.enc1 = b.enc2 and b.patid = c.patient_id""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{hce_iri}";
+        rr:class obo:OGMS_0000097;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000057;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+    ].
+
+<#map-SEV-medi-mspb-orgn>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.mspb_iri, a.Score, a.payment_iri, b.orgn_iri from mspb as a, hosp as b where a.providerid = b.provider_id""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{mspb_iri}";
+        rr:class ocr:OCRSEV_00000740;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{orgn_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{payment_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "Score"; ]
+    ].
+
+<#map-SEV-medi-mspb-payment-interval>
+    rr:logicalTable [ rr:sqlQuery """
+        select payment_iri, interval_iri from mspb""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{payment_iri}";
+        rr:class ocr:OCRSEV_00000746;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+    ].
+    
+<#map-SEV-medi-mspb-interval-year>
+    rr:logicalTable [ rr:sqlQuery """
+        select interval_iri, year_iri from mspb""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002091;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+    ].
+
+<#map-SEV-medi-mspb-year-label>
+    rr:logicalTable [ rr:sqlQuery """
+        select year_iri, substring(Measure_Start_Date, 5, 8) as year1 from mspb""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "year1"; ]
+    ].
+
+<#map-SEV-phy-grad-resi>
+    rr:logicalTable [ rr:sqlQuery """
+        select resi_iri, comp_iri, year_iri from gynec""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{resi_iri}";
+        rr:class medres:MedicalResidency;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000299;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{comp_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:RO_0002093;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+    ].
+
+<#map-SEV-phy-grad-year>
+    rr:logicalTable [ rr:sqlQuery """
+        select year_iri, grad_year from gynec""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "grad_year"; ];
+    ].
+
+<#map-SEV_phy-grad-completion>
+    rr:logicalTable [ rr:sqlQuery """
+        select comp_iri, gyn_iri, resi_iri, year_iri from gynec """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{comp_iri}";
+        rr:class ocr:OCRSEV_00000743;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{gyn_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{resi_iri}"; ];
+    ].
+
+<#map-SEV-policy-docpart>
+    rr:logicalTable [ rr:sqlQuery """
+        select date_iri, desc_label, temp_iri, doc_iri from policy""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{date_iri}";
+        rr:class obo:IAO_0000314;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{doc_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{temp_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "desc_label"; ];
+    ].
+
+<#map-SEV-policy-doc>
+    rr:logicalTable [ rr:sqlQuery """
+        select doc_iri, act_iri from policy """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{doc_iri}";
+        rr:class obo:IAO_0000310;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{act_iri}"; ];
+    ].
+
+<#map-SEV-policy-docact>
+    rr:logicalTable [ rr:sqlQuery """
+        select act_iri, act_label from policy""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{act_iri}";
+        rr:class obo:IAO_0021002;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "act_label"; ];
+    ].
+
+<#map-SEV-policy-oneDtemp>
+    rr:logicalTable [ rr:sqlQuery """
+        select temp_iri, date_label from policy""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{temp_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "date_label"; ];
+    ].

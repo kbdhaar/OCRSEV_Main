@@ -1,0 +1,1586 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ocr: <http://purl.obolibrary.org/obo/OCRSEV/> .
+@prefix pcor: <http://purl.obolibrary.org/obo/PCORnet/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix homicd9cm:	<http://purl.bioontology.org/ontology/HOM-ICD9CM/> .
+@prefix medres:	<http://vivoweb.org/ontology/core#>.
+@prefix efo: <http://www.ebi.ac.uk/efo/>.
+
+<#map-PCORowl-patientrole>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT pr_uri AS patient_role, p_uri AS organism FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{patient_role}";
+        rr:class obo:OMRSE_00000011;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{organism}"; ];
+    ].
+
+<#map-PCORowl-patientidentifier>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_patid_uri AS patient_identifier, patid_uri AS symbol, p_uri AS organism FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{patient_identifier}";
+        rr:class  pcor:PCORnet_00000019;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000219;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{organism}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000051;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{symbol}"; ]
+    ].
+
+<#map-PCORowl-symbol>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT patid_uri AS symbol, patient_id AS actual_patid FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{symbol}";
+        rr:class obo:IAO_0000028;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "actual_patid"; ];
+    ].
+
+<#map-PCORowl-pheno-female>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_uri AS person, p_pheno_sex FROM demo WHERE sex='F'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{p_pheno_sex}";
+        rr:class obo:PATO_0000383;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{person}"; ];
+    ].
+
+<#map-PCORowl-pheno-male>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_uri AS person, p_pheno_sex FROM demo WHERE sex='M'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{p_pheno_sex}";
+        rr:class obo:PATO_0000384;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{person}"; ];
+    ].
+
+<#map-PCORowl-pheno-ambiguous>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_uri AS person, p_pheno_sex FROM demo WHERE sex='A'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{p_pheno_sex}";
+        rr:class obo:PATO_0001340;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{person}"; ];
+    ].
+
+<#map-PCORowl-birth-organism-homosapiens-OBI_0100026>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri as organism from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{organism}";
+        rr:class obo:OBI_0100026;  
+    ].
+
+<#map-PCORowl-birth-organism-homosapiens-NCBITaxon_9606-neonate>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri as organism, p_neonate_stage_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{organism}";
+        rr:class obo:NCBITaxon_9606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{p_neonate_stage_uri}"; ];
+    ].
+
+<#map-PCORowl-neonate-stage>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_neonate_stage_uri, tr2_uri FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{p_neonate_stage_uri}";
+        rr:class obo:UBERON_0000105;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{tr2_uri}"; ];
+    ].
+
+<#map-PCORowl-birth>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT p_birth_uri, t1_uri, p_neonate_stage_uri FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{p_birth_uri}";
+        rr:class obo:UBERON_0035946;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{t1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{p_neonate_stage_uri}"; ];
+    ].
+
+<#map-PCORowl-0d_temporal_region>
+    rr:logicalTable [ rr:sqlQuery """
+        select t1_uri, tr2_uri, tr3_uri, birth_time from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{t1_uri}";
+        rr:class pcor:PCORnet_00000016;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{tr2_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{tr3_uri}"; ]
+    ];
+     rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "birth_time"; ]
+    ].
+
+<#map-PCORowl-1d_temporal_region>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT tr2_uri FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{tr2_uri}";
+        rr:class obo:BFO_0000038;
+    ].
+
+<#map-PCORowl-date-1d-temporal-region>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT tr3_uri, birth_date AS birth_date_str FROM demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{tr3_uri}";
+        rr:class pcor:PCORnet_00000016;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "birth_date_str"; ];
+    ].
+
+<#map-PCORowl-hispanic>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT hlid1_uri, p_uri, etl1_uri, eip1_uri FROM demo WHERE demo.hispanic = 'Y'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid1_uri}";
+        rr:class obo:OMRSE_00000127;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{eip1_uri}"; ]
+    ].
+
+<#map-PCORowl-nonhispanic>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT hlid1_uri as nhlid1_uri, p_uri, etl1_uri, eip1_uri FROM demo WHERE demo.hispanic =  'N'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{nhlid1_uri}";
+        rr:class obo:OMRSE_00000128 ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{eip1_uri}"; ]
+    ].
+
+<#map-PCORowl-PCORnet-hispanic>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT pnhid1_uri, etl1_uri, p_uri, sem_ind_uri FROM demo, sem WHERE demo.hispanic = 'Y'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid1_uri}";
+        rr:class pcor:PCORnet_00000016;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000051;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-PCORnet-nonhispanic>
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT pnhid1_uri, etl1_uri, p_uri,  sem_ind_uri FROM demo, sem WHERE demo.hispanic = 'N'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid1_uri}";
+        rr:class pcor:PCORnet_00000017;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-ethnicIdentification-process>
+    rr:logicalTable [ rr:sqlQuery """
+        select eip1_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{eip1_uri}";
+        rr:class obo:OMRSE_00000101;
+    ].
+
+<#map-PCORowl-ETL>
+    rr:logicalTable [ rr:sqlQuery """
+        select etl1_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}";
+        rr:class obo:IAO_0000650;
+    ].
+
+<#map-PCORowl-racialIdentification-process>
+    rr:logicalTable [ rr:sqlQuery """
+        select rip1_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}";
+        rr:class obo:OMRSE_00000099;
+    ].
+
+<#map-PCORowl-01-AmericanIndian>
+    rr:logicalTable [ rr:sqlQuery """
+        select hlid2_uri, p_uri, etl1_uri, rip1_uri from demo where race = 01""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid2_uri}";
+        rr:class obo:OMRSE_00000180;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}"; ]
+    ].
+
+<#map-PCORowl-AmericanIndian>
+    rr:logicalTable [ rr:sqlQuery """
+        select pnhid2_uri, p_uri, etl1_uri, sem_ind_uri FROM demo, sem WHERE demo.race = 01""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid2_uri}";
+        rr:class pcor:PCORnet_00000006;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-02-Asian>
+    rr:logicalTable [ rr:sqlQuery """
+        select hlid2_uri, p_uri, etl1_uri, rip1_uri from demo where race = 02""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid2_uri}";
+        rr:class obo:OMRSE_00000181;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}"; ]
+    ].
+
+<#map-PCORowl-Asian>
+    rr:logicalTable [ rr:sqlQuery """
+        select pnhid2_uri, p_uri, etl1_uri, sem_ind_uri FROM demo, sem WHERE demo.race = 02""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid2_uri}";
+        rr:class pcor:PCORnet_00000007;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-03-Black>
+    rr:logicalTable [ rr:sqlQuery """
+        select hlid2_uri, p_uri, etl1_uri, rip1_uri from demo where race = 03""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid2_uri}";
+        rr:class obo:OMRSE_00000182;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}"; ]
+    ].
+
+<#map-PCORowl-Black>
+    rr:logicalTable [ rr:sqlQuery """
+        select pnhid2_uri, p_uri, etl1_uri, sem_ind_uri FROM demo, sem WHERE demo.race = 03""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid2_uri}";
+        rr:class pcor:PCORnet_00000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-04-NativeHawaiian>
+    rr:logicalTable [ rr:sqlQuery """
+        select hlid2_uri, p_uri, etl1_uri, rip1_uri from demo where race = 04""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid2_uri}";
+        rr:class obo:OMRSE_00000183;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}"; ]
+    ].
+
+<#map-PCORowl-NativeHawaiian>
+    rr:logicalTable [ rr:sqlQuery """
+        select pnhid2_uri, p_uri, etl1_uri, sem_ind_uri FROM demo, sem WHERE demo.race = 04""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid2_uri}";
+        rr:class pcor:PCORnet_00000013;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-05-White>
+    rr:logicalTable [ rr:sqlQuery """
+        select hlid2_uri, p_uri, etl1_uri, rip1_uri from demo where race = 05""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{hlid2_uri}";
+        rr:class obo:OMRSE_00000184;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000295;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{rip1_uri}"; ]
+    ].
+
+<#map-PCORowl-White>
+    rr:logicalTable [ rr:sqlQuery """
+        select pnhid2_uri, p_uri, etl1_uri, sem_ind_uri FROM demo, sem WHERE demo.race = 05""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{pnhid2_uri}";
+        rr:class pcor:PCORnet_00000014;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{etl1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-PCORowl-refusal-to-answer>
+    rr:logicalTable [ rr:sqlQuery """
+        select rta2_uri, p_uri, ridqap1_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{rta2_uri}";
+        rr:class pcor:PCORnet_00000010;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{ridqap1_uri}"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-PCORowl-race-ID-QAP>
+    rr:logicalTable [ rr:sqlQuery """
+        select ridqap1_uri from demo """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{ridqap1_uri}";
+        rr:class obo:PCORnet_00000021;
+    ].
+
+<#map-PCORowl-homosapiens-participatesin-QAP>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, ridqap1_uri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000056;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{ridqap1_uri}"; ];
+    ].
+
+<#map-SEV-SEM>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM, SEM_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}";
+        rr:class ocr:OCRSEV_00000532;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "SEM"; ];
+    ].
+
+<#map-SEV-SEM-ind>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM_uri, SEM_ind_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_ind_uri}";
+        rr:class ocr:OCRSEV_00000532;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}"; ];
+    ].
+
+<#map-SEV-SEM-int>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM_uri, SEM_inter_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_inter_uri}";
+        rr:class ocr:OCRSEV_00000534;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}"; ];
+    ].
+
+<#map-SEV-SEM-org>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM_uri, SEM_org_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_org_uri}";
+        rr:class ocr:OCRSEV_00000535;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}"; ];
+    ].
+
+<#map-SEV-SEM-comm>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM_uri, SEM_comm_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_comm_uri}";
+        rr:class ocr:OCRSEV_00000536;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}"; ];
+    ].
+
+<#map-SEV-SEM-pol>
+    rr:logicalTable [ rr:sqlQuery """
+        select SEM_uri, SEM_pol_uri from sem""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_pol_uri}";
+        rr:class ocr:OCRSEV_00000537;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{SEM_uri}"; ];
+    ].
+
+<#map-SEV-pcor-bpm>
+    rr:logicalTable [ rr:sqlQuery """
+        select bpmd_iri, bp_iri, concat((systolic),'/',(diastolic)) as sysdia from bpbmi""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bpmd_iri}";
+        rr:class obo:VSO_0000005;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sysdia"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bp_iri}"; ]
+    ].
+
+<#map-SEV-pcor-bp-org>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.bp_iri as bp_iri, b.p_uri as p_uri from bpbmi as a, demo as b where a.patid = b.patient_id""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bp_iri}";
+        rr:class obo:VSO_0000004;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-bmi>
+    rr:logicalTable [ rr:sqlQuery """
+        select bmi_iri, bm_iri, original_bmi from bpbmi""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bmi_iri}";
+        rr:class obo:CMO_0000105;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "original_bmi"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bm_iri}"; ]
+    ].
+
+<#map-SEV-pcor-bm-org>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.bm_iri as bm_iri, b.p_uri as p_iri from bpbmi as a, demo as b where a.patid = b.patient_id""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{bm_iri}";
+        rr:class ocr:OCRSEV_00000550;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_iri}"; ]
+    ].
+
+<#map-SEV-pcor-indtobacco>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct a.tobacco as tob, a.patid, b.tu_iri as tu, b.turole_iri 
+            as turole, c.sem_ind_uri from bpbmi as a, demo as b , sem as c where 
+            a.patid = b.patient_id and b.sem = c.sem and a.tobacco = '1'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{tu}";
+        rr:class ocr:OCRSEV_00000549;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "tob"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{turole}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ]
+    ].
+
+<#map-SEV-pcor-intobacco-org>
+    rr:logicalTable [ rr:sqlQuery """
+        select distinct a.tobacco as tob, a.patid, b.tu_iri as tu, 
+            b.turole_iri as turole, b.p_uri from bpbmi as a, demo as b  
+            where a.patid = b.patient_id and a.tobacco = '1'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{turole}";
+        rr:class ocr:OCRSEV_00000545;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000052;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-HIV>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.patid, a.diag_iri, b.p_uri from diagnosis11 as a, 
+            demo as b where a.patid = b.patient_id and a.dx = '42' and a.dx_type = '9'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_5563;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "https://purl.obolibrary.org/obo/DOID_526"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-HPV>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.patid, a.diag_iri, b.p_uri from diagnosis11 as a, 
+            demo as b where a.patid = b.patient_id and a.dx = '79.4' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_5861;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://www.ebi.ac.uk/efo/EFO_0001668"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-233.1>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '233.1' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_7355;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-180>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '180' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_6577;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-180.9>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '180.9' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_6581;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-180.0>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '180.0' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_6578;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-180.1>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '180.1' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_6579;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cc-180.8>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.dx, a.diag_iri, a.patid, b.p_uri from diagnosis11 as a, demo as b 
+            where a.patid = b.patient_id and a.dx = '180.8' and a.dx_type = '9' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_6580;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/DOID_4362"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-exam-V72.31>
+    rr:logicalTable [ rr:sqlQuery """
+        select diag_iri, about_iri from diag_lookup where dx = 'V72.31'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_20246;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-exam-V72.31-patient>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.p_uri, b.about_iri from demo as a, diag_lookup as b where 
+            a.patient_id = b.patid and b.dx = 'V72.31'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}";
+        rr:class ocr:OCRSEV_00000714;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000057;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-screen-V76.2>
+    rr:logicalTable [ rr:sqlQuery """
+        select diag_iri, about_iri from diag_lookup where dx = 'V76.2' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}";
+        rr:class homicd9cm:MM_CLASS_20311;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-screen-V76.2-patient>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.p_uri, b.about_iri from demo as a, diag_lookup as b where a.patient_id = b.patid and b.dx = 'V76.2'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}";
+        rr:class ocr:OCRSEV_00000713;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000057;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-pap-795.02>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.p_uri, b.diag_iri, b.about_iri from demo as a, diag_lookup as b 
+            where a.patient_id = b.patid and b.dx = '795.02'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class homicd9cm:MM_CLASS_17270;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-pap-795.02-OGMS>
+    rr:logicalTable [ rr:sqlQuery """
+        select diag_iri from diag_lookup where dx = '795.02' """;
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class obo:OGMS_0000014;
+    ].
+
+<#map-SEV-pcor-diag-portion-795.02>
+    rr:logicalTable [ rr:sqlQuery """
+        select about_iri, portion_iri from diag_lookup where dx = '795.02'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{about_iri}";
+        rr:class obo:OBI_0100051;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0001000;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{portion_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cervixabnormal-795.02>
+    rr:logicalTable [ rr:sqlQuery """
+        select portion_iri, cervix_iri, abnormal_iri from diag_lookup  where dx = '795.02'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{portion_iri}";
+        rr:class obo:CHMO_0000993;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{cervix_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000053;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{abnormal_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-cervix-a-795.02>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.cervix_iri, b.p_uri from diag_lookup as a, demo as b where a.patid = b.patient_id and dx = '795.02'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{cervix_iri}";
+        rr:class obo:UBERON_0000002;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-abnormal-795.02>
+    rr:logicalTable [ rr:sqlQuery """
+        select abnormal_iri from diag_lookup where dx = '795.02'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{abnormal_iri}";
+        rr:class obo:PATO_0000460;
+    ].
+
+<#map-SEV-pcor-gid-M>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'M'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000060;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-GQ>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'GQ'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000059;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-MU>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'MU'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000061;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-SE>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'SE'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000062;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-TF>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'TF'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000063;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-TM>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'TM'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000064;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gid-F>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, gender_identity, gid_iri, gip_iri from demo where gender_identity = 'F'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gid_iri}";
+        rr:class pcor:PCORnet_00000065;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "gender_identity"; ];
+    ].
+
+<#map-SEV-pcor-gip>
+    rr:logicalTable [ rr:sqlQuery """
+        select gip_iri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{gip_iri}";
+        rr:class obo:OMRSE_00000135;
+    ].
+
+<#map-SEV-pcor-soid-AS>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'AS'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000050;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-GA>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'GA'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000051;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-LE>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'LE'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000052;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-MU>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'MU'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000053;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-QU>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'QU'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000054;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-QS>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'QS'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000055;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-SE>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'SE'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000056;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soid-ST>
+    rr:logicalTable [ rr:sqlQuery """
+        select p_uri, sexual_orientation, soid_iri, soip_iri from demo where sexual_orientation = 'ST'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soid_iri}";
+        rr:class pcor:PCORnet_00000057;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "sexual_orientation"; ];
+    ].
+
+<#map-SEV-pcor-soip>
+    rr:logicalTable [ rr:sqlQuery """
+        select soip_iri from demo""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://onefloridaconsortium.org/PCORowl_{soip_iri}";
+        rr:class obo:OMRSE_00000142;
+    ].
+
+<#map-SEV-pcor-diag-process>
+    rr:logicalTable [ rr:sqlQuery """
+        select diag_iri, process_iri from diagnosis11""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{diag_iri}";
+        rr:class obo:OGMS_0000073;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000312;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{process_iri}"; ]
+    ].
+
+<#map-SEV-pcor-process-interval>
+    rr:logicalTable [ rr:sqlQuery """
+        select process_iri, interval_iri from diagnosis11""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{process_iri}";
+        rr:class obo:OGMS_0000104;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-interval-date>
+    rr:logicalTable [ rr:sqlQuery """
+        select interval_iri, date_iri from diagnosis11""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002091;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{date_iri}"; ]
+    ].
+
+<#map-SEV-pcor-diag-date-label>
+    rr:logicalTable [ rr:sqlQuery """
+        select admit_date, date_iri from diagnosis11""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{date_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "admit_date"; ]
+    ].
+
+<#map-SEV-pcor-hce-interval-date>
+    rr:logicalTable [ rr:sqlQuery """
+        select interval_iri, date_iri from encount""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002091;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{date_iri}"; ]
+    ].
+
+<#map-SEV-ind-medins-patient>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.patid, a.enr_date_iri, a.enrol_iri, b.p_uri, c.sem_ind_uri from enrol as a, demo as b, 
+            sem as c where a.patid = b.patient_id and a.sem = c.sem and enr_basis = 'I'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{enrol_iri}";
+        rr:class ocr:OCRSEV_00000742;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{enr_date_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate  obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_ind_uri}"; ];
+    ].
+
+<#map-SEV-ind-medins-enrdate>
+    rr:logicalTable [ rr:sqlQuery """
+        select enr_date_iri, enr_start_date from enrol where enr_basis = 'I'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{enr_date_iri}";
+        rr:class obo:OMRSE_00000097;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "enr_start_date"; ];
+    ].

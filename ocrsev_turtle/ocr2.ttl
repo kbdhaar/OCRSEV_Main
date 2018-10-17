@@ -1,0 +1,361 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ocr: <http://purl.obolibrary.org/obo/OCRSEV/> .
+@prefix pcor: <http://purl.obolibrary.org/obo/PCORnet/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix homicd9cm:	<http://purl.bioontology.org/ontology/HOM-ICD9CM/> .
+@prefix medres:	<http://vivoweb.org/ontology/core#>.
+@prefix efo: <http://www.ebi.ac.uk/efo/>.
+
+<#map-SEV-brfss-smokerstatus>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.data_value, a.prev_uri, a.coll_uri, a.space_uri, a.behavior_iri, b.sem_comm_uri from 
+            brfss_smart as a, sem as b where a.sem = b.sem and Class = 'Tobacco Use' and 
+            Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{prev_uri}";
+        rr:class ocr:OCRSEV_00000583;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "data_value"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_comm_uri}"; ]
+    ].
+
+<#map-SEV-brfss-smoke-collection>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.coll_uri, a.role_uri from brfss_smart as a where 
+            Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}";
+        rr:class obo:OMRSE_00000023;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002351;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}"; ];
+    ].
+
+<#map-SEV-brfss-smoke-HS>
+    rr:logicalTable [ rr:sqlQuery """
+        select role_uri, role2_uri from brfss_smart as a where Class = 'Tobacco Use' 
+            and Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}";
+        rr:class obo:NCBITaxon_9606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000087;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}"; ];
+    ].
+
+<#map-SEV-brfss-smoke-role>
+    rr:logicalTable [ rr:sqlQuery """
+        select role2_uri from brfss_smart as a where Class = 'Tobacco Use' and 
+            Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}";
+        rr:class ocr:OCRSEV_00000545;
+    ].
+
+<#map-SEV-brfss-smoke-2dspace>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.space_uri, a.Locationdesc, c.zip_iri, c.zip2d_iri from brfss_smart as a , 
+            mmsa as c where a.LocationID = c.locid and Class = 'Tobacco Use' and 
+            Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}";
+        rr:class obo:BFO_0000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "Locationdesc"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0001015;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}"; ]
+    ].
+
+<#map-SEV-brfss-smoke-zip>
+    rr:logicalTable [ rr:sqlQuery """
+        select b.p_uri, c.zip_iri, c.zip2d_iri from brfss_smart as a , 
+            demo as b, mmsa as c where a.LocationID = c.locid and b.zipcodes = c.zipcodes 
+            and Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}";
+        rr:class obo:BFO_0000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:STATO_0000205;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0001015;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-brfss-smoke-ziplabel>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.space_uri, a.Locationdesc, b.zipcodes, b.p_uri, c.zip_iri from brfss_smart as a , 
+            demo as b, mmsa as c where a.LocationID = c.locid and b.zipcodes = c.zipcodes and 
+            Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}";
+        rr:class ocr:OCRSEV_00000606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "zipcodes"; ]
+    ].
+
+<#map-SEV-brfss-drinkerstatus>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.data_value, a.prev_uri, a.coll_uri, a.space_uri, a.behavior_iri, b.sem_comm_uri from 
+            brfss_smart as a, sem as b where a.sem = b.sem and Class = 'Alcohol Consumption' and 
+            Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{prev_uri}";
+        rr:class ocr:OCRSEV_00000601;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "data_value"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:IAO_0000136;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000050;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_comm_uri}"; ]
+    ].
+
+<#map-SEV-brfss-drinker-collection>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.coll_uri, a.role_uri from brfss_smart as a where 
+            Class = 'Alcohol Consumption' and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}";
+        rr:class obo:OMRSE_00000023;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0002351;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}"; ];
+    ].
+
+<#map-SEV-brfss-drinker-HS>
+    rr:logicalTable [ rr:sqlQuery """
+        select role_uri, role2_uri from brfss_smart as a where Class = 'Alcohol Consumption' 
+            and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}";
+        rr:class obo:NCBITaxon_9606;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0000087;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}"; ];
+    ].
+
+<#map-SEV-brfss-drinker-role>
+    rr:logicalTable [ rr:sqlQuery """
+        select role2_uri from brfss_smart as a where Class = 'Alcohol Consumption' and 
+            Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}";
+        rr:class ocr:OCRSEV_00000709;
+    ].
+
+<#map-SEV-brfss-drinker-2dspace>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.space_uri, a.Locationdesc, c.zip_iri, c.zip2d_iri from brfss_smart as a , 
+            mmsa as c where a.LocationID = c.locid and Class = 'Alcohol Consumption' and 
+            Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}";
+        rr:class obo:BFO_0000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "Locationdesc"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0001015;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}"; ]
+    ].
+
+<#map-SEV-brfss-drinker-zip>
+    rr:logicalTable [ rr:sqlQuery """
+       select b.p_uri, c.zip_iri, c.zip2d_iri from brfss_smart as a , demo as b, mmsa as c 
+            where a.LocationID = c.locid and b.zipcodes = c.zipcodes and Class = 'Alcohol Consumption' 
+            and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}";
+        rr:class obo:BFO_0000009;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:STATO_0000205;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:RO_0001015;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+    ].
+
+<#map-SEV-brfss-drinker-ziplabel>
+    rr:logicalTable [ rr:sqlQuery """
+        select a.space_uri, a.Locationdesc, b.zipcodes as zipcodes, b.p_uri, c.zip_iri as zip_iri from 
+            brfss_smart as a , demo as b, mmsa as c where a.LocationID = c.locid and b.zipcodes = c.zipcodes 
+            and Class = 'Alcohol Consumption' and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}";
+        rr:class ocr:OCRSEV_00000583;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "zipcodes"; ]
+    ].
+
+<#map-SEV-brfss-smoker-behavior-interval>
+    rr:logicalTable [ rr:sqlQuery """
+        select behavior_iri, interval_iri from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}";
+        rr:class ocr:OCRSEV_00000548;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+    ].
+
+<#map-SEV-brfss-smoker-interval-year>
+    rr:logicalTable [ rr:sqlQuery """
+        select interval_iri, year_iri from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+    ].
+
+<#map-SEV-brfss-smoker-year-label>
+    rr:logicalTable [ rr:sqlQuery """
+        select year_iri, year1 from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:column "year1"; ]
+    ].
+
+<#map-SEV-brfss-drinker-behavior-interval>
+    rr:logicalTable [ rr:sqlQuery """
+        select behavior_iri, interval_iri from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}";
+        rr:class ocr:OCRSEV_00000710;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000155;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+    ].
+
+<#map-SEV-brfss-drinker-interval-year>
+    rr:logicalTable [ rr:sqlQuery """
+        select interval_iri, year_iri from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000139;
+        rr:objectMap [ 
+	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+    ].
+
+<#map-SEV-brfss-drinker-year-label>
+    rr:logicalTable [ rr:sqlQuery """
+       select year_iri, year1 from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
+    	rr:sqlVersion rr:SQL2008];
+    rr:subjectMap [ 
+        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:class obo:BFO_0000038;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ 
+	    rr:column "year1"; ]
+    ].
