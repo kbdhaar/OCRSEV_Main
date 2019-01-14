@@ -1,0 +1,22 @@
+1.	Which CC patients are also tobacco users?
+2.	Which CC patients also have HIV?
+3.	What is the age at diagnosis of all CC patients?
+4.	What is the smoking prevalence within each MMSA, and how many CC patients live within each MMSA?
+5.	What is the drinking prevalence within each MMSA, and how many CC patients live within each MMSA?
+6.	How many CC patients live with a particular three-digit zip region, and how many hospitals exist within that three-digit zip?
+7.	How many CC patients live with a three-digit zip region, and how many physicians live within that three-digit zip?
+8.	Which hospitals have a MSPB score < 1 (less than National median), and how many CC patients have had an encounter in each of those hospitals?
+9.	What is the experience of every OCRSEV CC physician as measured in years, and how many CC patients has each physician encountered? (OCRSEV CC physician role is defined as “a physician role that inheres in an individual whose primary medical specialty is categorized according to Medicare Provider Enrollment, Chain and Ownership System (PECOS) codes in Medicare data and is at least one of the following : general practice, family practice, general surgery, radiation oncology, interventional radiology, diagnostic radiology, surgical oncology, obstetrics/gynecology, gynecological oncology or medical oncology.”)
+10.	How many physicians has each CC patient had an encounter with?
+11.	How many CC patients have had an encounter in every hospital, and what is the average experience of physicians in each of those hospitals?
+12.	What is the maximum recorded systolic and diastolic measurement values of each CC patient?
+13.	Which CC patients have elevated blood pressure (> 120/79 and < 130/80)?
+14.	How many CC patients have high blood pressure (>129/79)?
+15.	Which CC patients have a BMI that is classified as underweight?
+16.	What is the maximum and minimum recorded BMI of each CC patient?
+17.	Which CC patients have abnormal BMI and high blood pressure, and what are those values recorded across different encounters?
+18.	How many people were diagnosed with CC after the effective date of BCCPTA? List both the policies with their effective dates and the number of people who were diagnosed with CC after the effective dates.
+19.	Which CC patients having female biological sex and use tobacco also have a diagnosis of HIV? List the patients along with their race, ethnicity, gender, sexual orientation, smoking prevalence in their MMSA region and the number of physicians they have had an encounter with.
+20.	Which CC patients who also have a diagnosis of HIV were diagnosed with CC after the effective date of BCCPTA? List the patients along with their race, gender, sexual orientation, smoking prevalence in their MMSA region, the CCN of the hospitals they at which they have had an encounter, the MSPB score of those hospitals and the number of physicians per hospital with whom they have had an encounter.
+21.	Which instances are instances of subclasses of ‘clinical measurement’?
+22.	Which classes are defined by the axiom “relation has participant some Homo sapiens” and what are its instances?
