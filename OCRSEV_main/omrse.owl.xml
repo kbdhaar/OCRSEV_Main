@@ -1853,7 +1853,7 @@ However, Shaw explicates:
     <!-- http://purl.obolibrary.org/obo/OMRSE_00000039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000039">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OCRSEV/OCRSEV_00000545"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CANVAS/CANVAS_00000545"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -3862,9 +3862,9 @@ last accessed June 30, 2015</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OCRSEV/OCRSEV_00000545 -->
+    <!-- http://purl.obolibrary.org/obo/CANVAS/CANVAS_00000545 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OCRSEV/OCRSEV_00000545"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CANVAS/CANVAS_00000545"/>
     
 
 
