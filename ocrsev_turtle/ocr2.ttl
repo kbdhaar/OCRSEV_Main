@@ -1,6 +1,6 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix ocr: <http://purl.obolibrary.org/obo/OCRSEV/> .
+@prefix ocr: <http://purl.obolibrary.org.obo/CANVAS/> .
 @prefix pcor: <http://purl.obolibrary.org/obo/PCORnet/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -15,7 +15,7 @@
             Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{prev_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{prev_uri}";
         rr:class ocr:OCRSEV_00000583;
     ];
     rr:predicateObjectMap [
@@ -26,22 +26,22 @@
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{coll_uri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{space_uri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{behavior_iri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_comm_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{sem_comm_uri}"; ]
     ].
 
 <#map-SEV-brfss-smoke-collection>
@@ -50,13 +50,13 @@
             Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{coll_uri}";
         rr:class obo:OMRSE_00000023;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0002351;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}"; ];
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{role_uri}"; ];
     ].
 
 <#map-SEV-brfss-smoke-HS>
@@ -65,13 +65,13 @@
             and Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{role_uri}";
         rr:class obo:NCBITaxon_9606;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000087;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}"; ];
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{role2_uri}"; ];
     ].
 
 <#map-SEV-brfss-smoke-role>
@@ -80,7 +80,7 @@
             Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{role2_uri}";
         rr:class ocr:OCRSEV_00000545;
     ].
 
@@ -91,7 +91,7 @@
             Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{space_uri}";
         rr:class obo:BFO_0000009;
     ];
     rr:predicateObjectMap [
@@ -102,7 +102,7 @@
     rr:predicateObjectMap [
         rr:predicate obo:RO_0001015;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip2d_iri}"; ]
     ].
 
 <#map-SEV-brfss-smoke-zip>
@@ -112,18 +112,18 @@
             and Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip2d_iri}";
         rr:class obo:BFO_0000009;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:STATO_0000205;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip_iri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0001015;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{p_uri}"; ]
     ].
 
 <#map-SEV-brfss-smoke-ziplabel>
@@ -133,7 +133,7 @@
             Class = 'Tobacco Use' and Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip_iri}";
         rr:class ocr:OCRSEV_00000606;
     ];
     rr:predicateObjectMap [
@@ -149,7 +149,7 @@
             Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{prev_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{prev_uri}";
         rr:class ocr:OCRSEV_00000601;
     ];
     rr:predicateObjectMap [
@@ -160,22 +160,22 @@
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{coll_uri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{space_uri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{behavior_iri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{sem_comm_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{sem_comm_uri}"; ]
     ].
 
 <#map-SEV-brfss-drinker-collection>
@@ -184,13 +184,13 @@
             Class = 'Alcohol Consumption' and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{coll_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{coll_uri}";
         rr:class obo:OMRSE_00000023;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0002351;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}"; ];
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{role_uri}"; ];
     ].
 
 <#map-SEV-brfss-drinker-HS>
@@ -199,13 +199,13 @@
             and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{role_uri}";
         rr:class obo:NCBITaxon_9606;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000087;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}"; ];
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{role2_uri}"; ];
     ].
 
 <#map-SEV-brfss-drinker-role>
@@ -214,7 +214,7 @@
             Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{role2_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{role2_uri}";
         rr:class ocr:OCRSEV_00000709;
     ].
 
@@ -225,7 +225,7 @@
             Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{space_uri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{space_uri}";
         rr:class obo:BFO_0000009;
     ];
     rr:predicateObjectMap [
@@ -236,7 +236,7 @@
     rr:predicateObjectMap [
         rr:predicate obo:RO_0001015;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip2d_iri}"; ]
     ].
 
 <#map-SEV-brfss-drinker-zip>
@@ -246,18 +246,18 @@
             and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip2d_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip2d_iri}";
         rr:class obo:BFO_0000009;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:STATO_0000205;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip_iri}"; ]
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0001015;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{p_uri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{p_uri}"; ]
     ].
 
 <#map-SEV-brfss-drinker-ziplabel>
@@ -267,7 +267,7 @@
             and Class = 'Alcohol Consumption' and Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{zip_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{zip_iri}";
         rr:class ocr:OCRSEV_00000583;
     ];
     rr:predicateObjectMap [
@@ -281,13 +281,13 @@
         select behavior_iri, interval_iri from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{behavior_iri}";
         rr:class ocr:OCRSEV_00000548;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000155;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{interval_iri}"; ]
     ].
 
 <#map-SEV-brfss-smoker-interval-year>
@@ -295,13 +295,13 @@
         select interval_iri, year_iri from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{interval_iri}";
         rr:class obo:BFO_0000038;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000139;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{year_iri}"; ]
     ].
 
 <#map-SEV-brfss-smoker-year-label>
@@ -309,7 +309,7 @@
         select year_iri, year1 from brfss_smart where Topic = 'Current Smoker Status' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{year_iri}";
         rr:class obo:BFO_0000038;
     ];
     rr:predicateObjectMap [
@@ -323,13 +323,13 @@
         select behavior_iri, interval_iri from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{behavior_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{behavior_iri}";
         rr:class ocr:OCRSEV_00000710;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000155;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{interval_iri}"; ]
     ].
 
 <#map-SEV-brfss-drinker-interval-year>
@@ -337,13 +337,13 @@
         select interval_iri, year_iri from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{interval_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{interval_iri}";
         rr:class obo:BFO_0000038;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000139;
         rr:objectMap [ 
-	    rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}"; ]
+	    rr:template "http://purl.obolibrary.org.obo/CANVAS/{year_iri}"; ]
     ].
 
 <#map-SEV-brfss-drinker-year-label>
@@ -351,7 +351,7 @@
        select year_iri, year1 from brfss_smart where Topic = 'Alcohol Consumption' and Response = 'Yes'""";
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
-        rr:template "http://purl.obolibrary.org/obo/OCRSEV/{year_iri}";
+        rr:template "http://purl.obolibrary.org.obo/CANVAS/{year_iri}";
         rr:class obo:BFO_0000038;
     ];
     rr:predicateObjectMap [
