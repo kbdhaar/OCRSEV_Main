@@ -14,7 +14,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{h_num_iri}";
-        rr:class ocr:OCRSEV_00000704;
+        rr:class ocr:CANVAS_00000704;
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
@@ -57,7 +57,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{three_iri}";
-        rr:class ocr:OCRSEV_00000701;
+        rr:class ocr:CANVAS_00000701;
     ];
     rr:predicateObjectMap [
         rr:predicate  rdfs:label;
@@ -71,7 +71,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{h_agg_iri}";
-        rr:class ocr:OCRSEV_00000700;
+        rr:class ocr:CANVAS_00000700;
     ];
     rr:predicateObjectMap [
         rr:predicate  obo:RO_0002351;
@@ -111,7 +111,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{g_num_iri}";
-        rr:class obo:OCRSEV_00000707;
+        rr:class obo:CANVAS_00000707;
     ];
     rr:predicateObjectMap [
         rr:predicate  obo:IAO_0000136;
@@ -180,7 +180,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000715;
+        rr:class ocr:CANVAS_00000715;
     ].
 
 <#map-SEV-medi-gyncat-inrad>
@@ -189,7 +189,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000727;
+        rr:class ocr:CANVAS_00000727;
     ].
 
 <#map-SEV-medi-gyncat-radonc>
@@ -198,7 +198,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000737;
+        rr:class ocr:CANVAS_00000737;
     ].
 
 <#map-SEV-med-gyncat-medonc>
@@ -207,7 +207,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000729;
+        rr:class ocr:CANVAS_00000729;
     ].
 
 <#map-SEV-medi-gyncat-genphy>
@@ -216,7 +216,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000719;
+        rr:class ocr:CANVAS_00000719;
     ].
 
 <#map-SEV-medi-gyncat-famphy>
@@ -225,7 +225,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000721;
+        rr:class ocr:CANVAS_00000721;
     ].
 
 <#map-SEV-medi-gyncat-gynec>
@@ -243,7 +243,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000723;
+        rr:class ocr:CANVAS_00000723;
     ].
 
 <#map-SEV-medi-gyncat-diagrad>
@@ -252,7 +252,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000736;
+        rr:class ocr:CANVAS_00000736;
     ].
 
 <#map-SEV-medi-gyncat-gynonc>
@@ -261,7 +261,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000725;
+        rr:class ocr:CANVAS_00000725;
     ].
 
 <#map-SEV-medi-gyncat-surgonc>
@@ -270,7 +270,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{grole_iri}";
-        rr:class ocr:OCRSEV_00000735;
+        rr:class ocr:CANVAS_00000735;
     ].
 
 <#map-SEV-medi-gyn-npi>
@@ -279,7 +279,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{npi_iri}";
-        rr:class ocr:OCRSEV_00000738;
+        rr:class ocr:CANVAS_00000738;
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
@@ -293,7 +293,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{ccn_iri}";
-        rr:class ocr:OCRSEV_00000739;
+        rr:class ocr:CANVAS_00000739;
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
@@ -363,7 +363,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{mspb_iri}";
-        rr:class ocr:OCRSEV_00000740;
+        rr:class ocr:CANVAS_00000740;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
@@ -387,7 +387,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{payment_iri}";
-        rr:class ocr:OCRSEV_00000746;
+        rr:class ocr:CANVAS_00000746;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000155;
@@ -429,7 +429,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{resi_iri}";
-        rr:class medres:MedicalResidency;
+        rr:class ocr:CANVAS_00000750;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0000299;
@@ -462,7 +462,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{comp_iri}";
-        rr:class ocr:OCRSEV_00000743;
+        rr:class ocr:CANVAS_00000749;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;

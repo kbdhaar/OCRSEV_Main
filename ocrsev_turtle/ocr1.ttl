@@ -610,7 +610,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_uri}";
-        rr:class ocr:OCRSEV_00000532;
+        rr:class ocr:CANVAS_00000532;
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
@@ -624,7 +624,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_ind_uri}";
-        rr:class ocr:OCRSEV_00000532;
+        rr:class ocr:CANVAS_00000532;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
@@ -638,7 +638,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_inter_uri}";
-        rr:class ocr:OCRSEV_00000534;
+        rr:class ocr:CANVAS_00000534;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
@@ -652,7 +652,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_org_uri}";
-        rr:class ocr:OCRSEV_00000535;
+        rr:class ocr:CANVAS_00000535;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
@@ -666,7 +666,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_comm_uri}";
-        rr:class ocr:OCRSEV_00000536;
+        rr:class ocr:CANVAS_00000536;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
@@ -680,7 +680,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{SEM_pol_uri}";
-        rr:class ocr:OCRSEV_00000537;
+        rr:class ocr:CANVAS_00000537;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000050;
@@ -746,7 +746,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{bm_iri}";
-        rr:class ocr:OCRSEV_00000550;
+        rr:class ocr:CANVAS_00000550;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000052;
@@ -762,7 +762,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{tu}";
-        rr:class ocr:OCRSEV_00000549;
+        rr:class ocr:CANVAS_00000549;
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
@@ -788,7 +788,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{turole}";
-        rr:class ocr:OCRSEV_00000545;
+        rr:class ocr:CANVAS_00000545;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000052;
@@ -977,7 +977,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{about_iri}";
-        rr:class ocr:OCRSEV_00000714;
+        rr:class ocr:CANVAS_00000714;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000057;
@@ -1005,7 +1005,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{about_iri}";
-        rr:class ocr:OCRSEV_00000713;
+        rr:class ocr:CANVAS_00000713;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:RO_0000057;
@@ -1553,7 +1553,7 @@
     	rr:sqlVersion rr:SQL2008];
     rr:subjectMap [ 
         rr:template "http://purl.obolibrary.org.obo/CANVAS/{enrol_iri}";
-        rr:class ocr:OCRSEV_00000742;
+        rr:class ocr:CANVAS_00000742;
     ];
     rr:predicateObjectMap [
         rr:predicate obo:IAO_0000136;
