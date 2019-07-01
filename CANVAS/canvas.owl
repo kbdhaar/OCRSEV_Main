@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/CANVAS.owl/"
      xml:base="http://purl.obolibrary.org/obo/CANVAS.owl/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -29943,7 +29943,7 @@ MSPB always has some time associated with it which is defined by when the paymen
     <!-- http://purl.obolibrary.org/obo/CANVAS/CANVAS_00000746 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CANVAS/CANVAS_00000746">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115 xml:lang="en">A planned process in which Medicare part A and part B payments occur for services provided to a Medicare beneficiary during an episode that spans from three days prior to an inpatient hospital admission through 30 days after discharge, as part of the hospital Value-Based Purchasing program.</obo:IAO_0000115>
         <obo:IAO_0000117>Dharani K Balasubramanian</obo:IAO_0000117>
         <obo:IAO_0000119>source1: https://www.medicare.gov/hospitalcompare/Data/Medicare-Spending-Beneficiary.html
